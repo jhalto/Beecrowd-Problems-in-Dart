@@ -1,0 +1,20 @@
+import 'dart:io';
+
+void main()
+{
+    List<String> abc = stdin.readLineSync()!.split(" ")!;
+    double a = double.parse(abc[0]);
+    double b = double.parse(abc[1]);
+    double c = double.parse(abc[2]);
+    double rectangled_triangle=.5*a*c;
+    double radius_circle = 3.14159 * c*c;
+    double trapezium = .5*(a+b)*c;
+    double square = b*b;
+    double rectangle = a*b;
+    print("TRIANGULO: ${rectangled_triangle.toStringAsFixed(3)}");
+    print("CIRCULO: ${radius_circle.toStringAsFixed(3)}");
+    print("TRAPEZIO: ${trapezium.toStringAsFixed(3)}");
+    print("QUADRADO: ${square.toStringAsFixed(3)}");
+    print("RETANGULO: ${rectangle.toStringAsFixed(3)}");
+
+}
