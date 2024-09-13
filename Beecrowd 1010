@@ -1,0 +1,16 @@
+import 'dart:io';
+
+void main()
+{
+    List<String> products = stdin.readLineSync()!.split(" ");
+    int code = int.parse(products[0]);
+    int units = int.parse(products[1]);
+    double price = double.parse(products[2]);
+    List<String> product2 = stdin.readLineSync()!.split(" ");
+    int code2 = int.parse(product2[0]);
+    int units2 = int.parse(product2[1]);
+    double price2 = double.parse(product2[2]);
+    print("VALOR A PAGAR: R\$ ${(units *price+units2*price2).toStringAsFixed(2)}");
+    
+
+}
