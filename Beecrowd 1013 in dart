@@ -1,0 +1,12 @@
+import 'dart:io';
+
+void main()
+{
+    List<String> value = stdin.readLineSync()!.split(" ");
+    int a = int.parse(value[0]);
+    int b = int.parse(value[1]);
+    int c = int.parse(value[2]);
+    int greatest= (a+b+(a-b).abs())~/2;
+    int greatestall= (greatest+c+(greatest-c).abs())~/2;
+    print('$greatestall eh o maior');
+}
