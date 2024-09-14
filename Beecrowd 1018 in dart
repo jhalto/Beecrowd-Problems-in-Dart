@@ -1,0 +1,21 @@
+import 'dart:io';
+
+void main()
+{
+    int x = int.parse(stdin.readLineSync()!);
+     int note100= (x~/100);
+    int note50= ((x%100)~/50);
+    int note20=(((x%100)%50)~/20);
+    int note10=((((x%100)%50)%20)~/10);
+    int note5=(((((x%100)%50)%20)%10)~/5);
+    int note2=((((((x%100)%50)%20)%10)%5)~/2);
+    int note1=((((((x%100)%50)%20)%10)%5)%2);
+    print(x);
+    print("${note100} nota(s) de R\$ 100,00");
+    print("${note50} nota(s) de R\$ 50,00");
+    print("${note20} nota(s) de R\$ 20,00");
+    print("${note10} nota(s) de R\$ 10,00");
+    print("${note5} nota(s) de R\$ 5,00");
+    print("${note2} nota(s) de R\$ 2,00");
+    print("${note1} nota(s) de R\$ 1,00");
+}
