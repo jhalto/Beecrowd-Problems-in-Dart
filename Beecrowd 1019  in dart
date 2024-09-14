@@ -1,0 +1,10 @@
+import 'dart:io';
+
+void main()
+{
+    int seconds = int.parse(stdin.readLineSync()!);
+    int hours=((seconds~/60)~/60);
+    int minutes=((seconds%3600)~/60);
+    int second=(seconds%60);
+ print("${hours}:${minutes}:${second}");
+}
