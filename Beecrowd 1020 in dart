@@ -1,0 +1,12 @@
+import 'dart:io';
+
+void main()
+{
+    int days = int.parse(stdin.readLineSync()!);
+    int ano = (days~/365);
+    int mes = (days%365)~/30;
+    int dia = (((days)%365)%30);
+    print("${ano} ano(s)");
+    print("${mes} mes(es)");
+    print("${dia} dia(s)");
+}
