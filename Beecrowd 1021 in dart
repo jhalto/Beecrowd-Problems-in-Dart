@@ -1,0 +1,36 @@
+import 'dart:io';
+
+void main()
+{
+   double x = double.parse(stdin.readLineSync()!);
+   
+   int tk = x.floor();
+   int coin= ((x-tk)*100).round();
+   int note100= (tk~/100);
+    int note50= ((tk%100)~/50);
+    int note20=(((tk%100)%50)~/20);
+    int note10=((((tk%100)%50)%20)~/10);
+    int note5=(((((tk%100)%50)%20)%10)~/5);
+    int note2=((((((tk%100)%50)%20)%10)%5)~/2);
+
+    int coin1 = (((((((tk%100)%50)%20)%10)%5)%2)~/1);
+    int coin50= (coin~/50);
+    int coin25= ((coin%50)~/25);
+    int coin10= (((coin%50)%25)~/10);
+    int coin5 = ((((coin%50)%25)%10)~/5);
+    int coin01 =((((coin%50)%25)%10)%5);
+    print("NOTAS:");
+    print("${note100} nota(s) de R\$ 100.00");
+print("${note50} nota(s) de R\$ 50.00");
+print("${note20} nota(s) de R\$ 20.00");
+print("${note10} nota(s) de R\$ 10.00");
+print("${note5} nota(s) de R\$ 5.00");
+print("${note2} nota(s) de R\$ 2.00");
+print("MOEDAS:");
+print("${coin1} moeda(s) de R\$ 1.00");
+print("${coin50} moeda(s) de R\$ 0.50");
+print("${coin25} moeda(s) de R\$ 0.25");
+print("${coin10} moeda(s) de R\$ 0.10");
+print("${coin5} moeda(s) de R\$ 0.05");
+print("${coin01} moeda(s) de R\$ 0.01");
+}
