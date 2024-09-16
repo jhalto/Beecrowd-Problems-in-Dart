@@ -1,0 +1,22 @@
+import 'dart:io';
+
+void main()
+{
+    List<String> a = stdin.readLineSync()!.split(" ");
+    int x = int.parse(a[0]);
+    int y = int.parse(a[1]);
+    
+    if(x==1){
+        print("Total: R\$ ${(y*4.00).toStingAsFixed(2)}");
+    }else if(x==2){
+        print("Total: R\$ ${(y*4.50).toStingAsFixed(2)}");
+    }else if(x==3){
+        print("Total: R\$ ${(y*5.00).toStingAsFixed(2)}");
+    }else if(x==4){
+        print("Total: R\$ ${(y*2.00).toStingAsFixed(2)}");
+    }else if(x==5){
+        print("Total: R\$ ${(y*1.50).toStingAsFixed(2)}");
+    }
+    
+
+}
