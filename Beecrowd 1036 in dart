@@ -1,0 +1,22 @@
+import 'dart:io';
+import 'dart:math';
+void main()
+{
+    List<String> x = stdin.readLineSync()!.split(" ");
+    double a = double.parse(x[0]);
+    double b = double.parse(x[1]);
+    double c = double.parse(x[2]);
+    
+    double root = (b*b)-(4*a*c);
+    
+    if (a == 0 || root <0){
+        print("Impossivel calcular");
+    }else{
+        double x1 = (-b+sqrt((b*b)-(4*a*c)))/(2*a);
+        double x2 = (-b-sqrt((b*b)-(4*a*c)))/(2*a);
+    print("R1 = ${x1.toStringAsFixed(5)}");
+    print("R2 = ${x2.toStringAsFixed(5)}");
+    }
+    
+
+}
