@@ -1,0 +1,19 @@
+import 'dart:io';
+
+void main()
+{
+    List <String> a = stdin.readLineSync()!.split(" ");
+    List <int> x = a.map(int.parse).toList();
+    
+    List<int> sorted = List.from(x)..sort();
+    
+    for(int i in sorted){
+        print(i);
+    }
+    print("");
+    for(int i in x){
+        print(i);
+    }
+
+
+}
