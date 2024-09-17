@@ -1,0 +1,33 @@
+import 'dart:io';
+
+void main()
+{
+    List<String> x = stdin.readLineSync()!.split(" ");
+    double a = double.parse(x[0]);
+    double b = double.parse(x[1]);
+    double c = double.parse(x[2]);
+    List<double> y = [a,b,c];
+    y.sort((b,a) => a.compareTo(b));
+    double A = y[0];
+    double B = y[1];
+    double C = y[2];
+    if(A>=B+C){
+        print("NAO FORMA TRIANGULO");
+    }else if(A*A==B*B+C*C){
+            print("TRIANGULO RETANGULO");
+    }
+    else if(A*A>B*B+C*C){
+    print("TRIANGULO OBTUSANGULO");
+    }
+    else if(A*A<B*B+C*C){
+    print("TRIANGULO ACUTANGULO");
+    }
+    if(A==B && B == C){
+    print("TRIANGULO EQUILATERO");
+    }
+    if(A==B && B != C || A==C && C!=B || B==C && B!=A){
+    print("TRIANGULO ISOSCELES");}
+    
+
+
+}
