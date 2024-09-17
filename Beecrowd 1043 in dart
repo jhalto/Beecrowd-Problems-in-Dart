@@ -1,0 +1,18 @@
+import 'dart:io';
+
+void main()
+{
+    List<String> x = stdin.readLineSync()!.split(" ");
+    double a = double.parse(x[0]);
+    double b = double.parse(x[1]);
+    double c = double.parse(x[2]);
+    if (a+b>c && a+c>b && b+c>a){
+        double peri = a+b+c;
+        print("Perimetro = ${peri.toStringAsFixed(1)}");
+    }else{
+        double area = ((a+b)/2)*c;
+        print("Area = ${area.toStringAsFixed(1)}");
+    }
+
+
+}
